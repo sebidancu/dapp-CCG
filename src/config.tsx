@@ -7,3 +7,7 @@ export const StakeContract =
 export const dAppName = 'NFT dApp';
 
 export const contractMint = '';
+
+export const colectienft = 'MOONS-839e8a';
+export const mode = 'devnet-';
+export const net = 'mainnet';

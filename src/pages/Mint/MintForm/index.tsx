@@ -15,6 +15,7 @@ import { StateType } from './types';
 import { Button, Card, Col, Container, Form, Row, Dropdown, DropdownButton } from 'react-bootstrap';
 import axios, { AxiosResponse } from 'axios';
 import { AbiRegistry, Address, AddressValue, ContractFunction, ResultsParser, SmartContract, SmartContractAbi } from '@elrondnetwork/erdjs/out';
+import { mode, colectienft } from 'config';
 
 const MintForm = () => {
   const account = useGetAccountInfo();
@@ -45,7 +46,7 @@ const MintForm = () => {
     (async () => {
       await axios
         .get(
-          `https://devnet-api.elrond.com/accounts/${address}/nfts?collection=FACES-dd0aec`
+          `https://${mode}api.elrond.com/accounts/${address}/nfts?collection=${colectienft}`
         )
         .then(
           async (result) => {

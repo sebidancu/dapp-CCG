@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { dAppName } from 'config';
 import { routeNames } from 'routes';
 import { ReactComponent as ElrondLogo } from './../../../assets/img/elrond.svg';
+import { net } from 'config';
 
 const Navbar = () => {
   const { address } = useGetAccountInfo();
@@ -25,6 +26,13 @@ const Navbar = () => {
           <ElrondLogo className='elrond-logo' />
           <span className='dapp-name text-muted'>{dAppName}</span>
         </Link>
+        <div style={{ margin: '30px', fontWeight: '500' }}>
+          {net === 'mainnet' ? (
+            <div> Mode: 🟢 {net}</div>
+          ) : (
+            <div>Mode: 🔵 {net}</div>
+          )}
+        </div>
 
         <Container>
           <Nav className='ml-auto'>
