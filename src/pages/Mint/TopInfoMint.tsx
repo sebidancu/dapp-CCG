@@ -11,10 +11,10 @@ const TopInfoMint = () => {
         <span className='opacity-6 mr-1'>Your address:</span>
         <span data-testid='accountAddress'> {address}</span>
       </div>
-      <div className='mb-4'>
+      {/* <div className='mb-4'>
         <span className='opacity-6 mr-1'>Contract address:</span>
         <span data-testid='contractAddress'> {contractAddress}</span>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -16,6 +16,8 @@ import { Button, Card, Col, Container, Form, Row, Dropdown, DropdownButton } fro
 import axios, { AxiosResponse } from 'axios';
 import { AbiRegistry, Address, AddressValue, ContractFunction, ResultsParser, SmartContract, SmartContractAbi } from '@elrondnetwork/erdjs/out';
 import { mode, colectienft } from 'config';
+import Chart from './Chart';
+
 
 const MintForm = () => {
   const account = useGetAccountInfo();
@@ -74,6 +76,7 @@ const MintForm = () => {
         <h2>
           You have <b>{items.length}</b> NFTs in your wallet.
         </h2>
+        <Chart></Chart>
         </>
         :
         <>
